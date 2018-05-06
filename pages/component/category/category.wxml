@@ -1,0 +1,30 @@
+<!--pages/component/category/category.wxml-->
+<view class='main'>
+    <view class='categroy-left'>
+        <block wx:for="{{cataType}}">
+            <view data-id='{{item.id}}' bindtap='switchTab' class="cate-list {{curIndex === item.id?'on':''}}">{{item.name}}</view>
+        </block>        
+    </view>
+    <scroll-view scroll-y class='categroy-right'>
+        <view class="cate-box">
+            <view class="cate-banner">
+                <image src="{{categorys.banner}}"></image>
+            </view>
+            <view class="cate-title">
+                <text>{{categorys.name}}</text>
+            </view>
+            <view class="product">
+                <block wx:for="{{categorys.detail}}" wx:for-item="val">
+                    <view class="product-list">
+                        <navigator url="../list/list?id={{val.id}}">
+                            <image src="{{val.thumb}}"></image>
+                            <view class="classname">
+                                <text>{{val.name}}</text>
+                            </view>
+                        </navigator>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </scroll-view>
+</view>

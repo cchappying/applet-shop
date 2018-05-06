@@ -1,0 +1,15 @@
+<!--pages/component/list/list.wxml-->
+<view class='main'>
+	<view class='banner'>
+		<image src='/image/list1.png'></image>
+	</view>
+	<view class='list-box'>
+		<view class='newest-list' wx:for ='{{goodsList}}'>
+			<navigator url="/pages/component/details/details?id={{item.id}}">
+				<image src='{{item.pic}}'></image>
+				<view class='newest-text'><text>{{item.name}}{{item.desc}}</text></view>
+				<view class='newest-text'><text>¥ {{item.price}}</text></view>
+			</navigator>
+		</view>			
+	</view>
+</view>

@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<!-- <import src='../../template/goodsList/goodsList'/> -->
+<import src='/pages/template/goodsList/goodsList'/> 
+<view class='main'>
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+        <swiper-item wx:for="{{imgUrls}}" >
+            <image src="{{item}}" class="slide-image" width="100%" />
+        </swiper-item>
+    </swiper>
+	<view class='select'>
+		<view class='select-title'><text>精选主题</text></view>
+		<view class='select-top'>
+			<view class='select-top-small'>
+				<navigator url="/pages/component/list/list?id=0">
+					<image src='/image/s1.png'></image>
+				</navigator>
+			</view>
+			<view class='select-top-small'>
+				<navigator url="/pages/component/list/list?id=1">
+					<image src='/image/s1.png'></image>
+				</navigator>
+			</view>
+		</view>
+		<view class='select-bottom'>
+			<navigator url="/pages/component/list/list?id=3">
+				<image src='/image/s3.png'></image>
+			</navigator>
+		</view>
+	</view>
+	<view class='newest'>
+		<view class='newest-title'><text>精选主题</text></view>
+		<view class="newest-box">
+            <block wx:for="{{goodsList}}">
+                <template is='goodsList' data='{{...item}}'></template>
+            </block>			
+		</view>
+	</view>
+</view>

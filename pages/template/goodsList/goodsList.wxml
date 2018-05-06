@@ -1,0 +1,13 @@
+<template name='goodsList'>
+    <view class="newest-list">
+        <navigator url="/pages/component/details/details?id={{id}}">
+            <image src="{{s_thumb}}"></image>
+            <view class="newest-text">
+                <text>{{name}}</text>
+            </view>
+            <view class="newest-text">
+                <text>￥{{price}}</text>
+            </view>
+        </navigator>
+    </view>
+</template>

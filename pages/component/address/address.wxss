@@ -1,0 +1,37 @@
+/* pages/component/address/address.wxss */
+@import '../../common/common.wxss';
+.orders-address{
+    position: relative;
+    padding: 20rpx 50rpx 20rpx 35rpx;
+    font-size: 14px;
+    line-height: 25px;
+    border-bottom: 20rpx solid #ededed;
+    color: #adadad;
+}
+.name-phone{
+    display: flex;
+    justify-content:space-between;
+}
+.orders-address-name{
+    width: 300rpx;
+}
+
+.btn-addAddress{
+    display: block;
+    width: 700rpx;
+    margin: 30rpx auto;
+} 
+.addaddress{
+    padding-left: 30rpx;
+}
+.addaddress input{
+    height: 90rpx;
+    border-bottom: 1rpx solid #ededed;
+    color: #999;
+}
+.addaddress .input-placeholder{
+    color: #aaa;
+}
+.addaddress button{
+    margin:30rpx 30rpx 0 0;
+}

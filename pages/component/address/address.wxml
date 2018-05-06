@@ -1,0 +1,22 @@
+<!--pages/component/address/address.wxml-->
+<view class="main">
+    <view class='addresss'>
+        <view class="orders-address" wx:for="{{addresss}}" data-index='{{index}}'  bindtap='checkAddress'>
+            <view class='name-phone'>
+                <text class="orders-address-name">收货人: {{item.name}}</text>
+                <text class="orders-address-phone">电话: {{item.phone}}</text>
+            </view>            
+            <view class="orders-address-detail">{{item.detail}}</view>
+        </view>
+    </view>
+    <button type="default" class='btn-addAddress' bindtap='getWxAddress' wx:if="{{isShowWxAddress}}">选择微信地址</button>
+    <button type="default" class='btn-addAddress' bindtap='addAddress'>新增地址</button>
+    <view class="addaddress" wx:if="{{isAddAddress}}">
+        <form bindsubmit="formSubmit">
+            <input value="{{addName}}" name="name" placeholder="姓名" />
+            <input type="number" name="phone" value="{{addPhone}}" placeholder="电话号码" />
+            <input name="detail" value="{{addAddress}}" placeholder="详细地址" />
+            <button form-type="submit">保存</button>
+        </form>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+.newest-list{
+    display: inline-block;
+    width: 325rpx;
+    height: 325rpx;
+    margin:0 20rpx 20rpx 0;
+    border-radius: 10px;
+    text-align: center;
+    background: #f5f6f5;
+}
+.newest-list:nth-child(2n){
+    margin-right: 0;
+}
+.newest-list image{
+    width: 175rpx;
+    height: 175rpx;
+    margin: 20rpx 0 10rpx;
+}
+.newest-list .newest-text{
+    font-size: 32rpx;
+}

@@ -1,0 +1,12 @@
+<!--pages/component/list/list.wxml-->
+<import src='/pages/template/goodsList/goodsList'/>
+<view class='main'>
+	<view class='banner'>
+		<image src='/image/list1.png'></image>
+	</view>
+	<view class='list-box'>
+        <block wx:for ='{{goodsList}}'>
+            <template is='goodsList' data='{{...item}}'></template>
+        </block>			
+	</view>
+</view>
